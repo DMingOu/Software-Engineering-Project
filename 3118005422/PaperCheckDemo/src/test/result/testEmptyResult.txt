@@ -1,0 +1,3 @@
+src/test/testcase/orig.txt
+src/test/testcase/empty.txt
+Similar Score ：0.00

@@ -1,0 +1,3 @@
+src/test/testcase/orig.txt
+src/test/testcase/orig_0.8_rep.txt
+Similar Score ：99.01
