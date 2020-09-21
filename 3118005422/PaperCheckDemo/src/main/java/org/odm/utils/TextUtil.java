@@ -2,8 +2,6 @@ package org.odm.utils;
 
 import com.hankcs.hanlp.HanLP;
 import com.hankcs.hanlp.seg.common.Term;
-import com.hankcs.hanlp.tokenizer.NLPTokenizer;
-import com.hankcs.hanlp.tokenizer.SpeedTokenizer;
 import com.hankcs.hanlp.tokenizer.StandardTokenizer;
 import org.odm.bean.Word;
 
@@ -45,8 +43,6 @@ public class TextUtil {
         return termList.stream().map(term ->
                 new Word(term.word, term.nature.toString())).collect(Collectors.toList());
     }
-
-
 
     /**
      * 获取移除标点符号后的字符串列表

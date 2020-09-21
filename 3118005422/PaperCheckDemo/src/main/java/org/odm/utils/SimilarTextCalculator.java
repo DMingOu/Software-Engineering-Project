@@ -26,13 +26,15 @@ public class SimilarTextCalculator {
      * 计算两个字符串的相似度
      */
     public static double getSimilarity(String text1, String text2) {
-
+        boolean isBlank1 = StringUtils.isBlank(text1);
+        boolean isBlank2 = StringUtils.isBlank(text2);
         //如果内容为空，或者字符长度为0，则代表完全相同
-        if (StringUtils.isBlank(text1) && StringUtils.isBlank(text2)) {
+        if (isBlank1 && isBlank2) {
             return 1.00;
         }
+
         //如果一个为0或者空，一个不为，那说明完全不相似
-        if (StringUtils.isBlank(text1) || StringUtils.isBlank(text2)) {
+        if (isBlank1 || isBlank2) {
             return 0.0;
         }
         //这个代表如果两个字符串相等那当然返回1了
@@ -149,10 +151,10 @@ public class SimilarTextCalculator {
         return freq;
     }
 
-    /**
+    /*
      * 输出：词频统计信息
      */
-    private static String getWordsFrequencyString(Map<String, AtomicInteger> frequency) {
+/*    private static String getWordsFrequencyString(Map<String, AtomicInteger> frequency) {
         StringBuilder str = new StringBuilder();
         if (frequency != null && !frequency.isEmpty()) {
             AtomicInteger integer = new AtomicInteger();
@@ -162,7 +164,7 @@ public class SimilarTextCalculator {
         }
         str.setLength(str.length() - 1);
         return str.toString();
-    }
+    }*/
 
     /**
      * 构造权重快速搜索容器
