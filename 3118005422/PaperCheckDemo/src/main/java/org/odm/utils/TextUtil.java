@@ -2,11 +2,8 @@ package org.odm.utils;
 
 import com.hankcs.hanlp.HanLP;
 import com.hankcs.hanlp.seg.common.Term;
-import com.hankcs.hanlp.tokenizer.StandardTokenizer;
 import org.odm.bean.Word;
-
 import java.math.BigDecimal;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -23,14 +20,14 @@ public class TextUtil {
     }
 
 
-    /**
-     * 把字符串进行分词到 词组 列表
-     * @param rawText 未分词处理的文本
-     * @return 词组列表
-     */
-    private static List<Term> string2TermList(String rawText){
-        return StandardTokenizer.segment(rawText);
-    }
+//    /**
+//     * 把字符串进行分词到 词组 列表
+//     * @param rawText 未分词处理的文本
+//     * @return 词组列表
+//     */
+//    private static List<Term> string2TermList(String rawText){
+//        return StandardTokenizer.segment(rawText);
+//    }
 
     /**
      * 利用HanLp分词

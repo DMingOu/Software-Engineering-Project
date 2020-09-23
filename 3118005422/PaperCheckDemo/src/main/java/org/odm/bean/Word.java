@@ -1,7 +1,6 @@
 package org.odm.bean;
 
 import lombok.Data;
-
 import java.util.Objects;
 
 /**
