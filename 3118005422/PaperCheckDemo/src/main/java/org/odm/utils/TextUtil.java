@@ -44,25 +44,26 @@ public class TextUtil {
                 new Word(term.word, term.nature.toString())).collect(Collectors.toList());
     }
 
-    /**
-     * 获取移除标点符号后的字符串列表
-     * @param termList 词组列表
-     * @return 移除了标点符号后的字符串列表
-     */
-    public static List<String> getStringListWithoutPunctuation(List<Term> termList){
-        List<String> strings = new ArrayList<>();
-        for(Term term : termList){
-            if(!term.toString().endsWith("/w")){
-                strings.add(term.word);
-            }
-        }
-        return strings;
-    }
+//    /**
+//     * 获取移除标点符号后的字符串列表
+//     * @param termList 词组列表
+//     * @return 移除了标点符号后的字符串列表
+//     */
+//    public static List<String> getStringListWithoutPunctuation(List<Term> termList){
+//        List<String> strings = new ArrayList<>();
+//        for(Term term : termList){
+//            if(!term.toString().endsWith("/w")){
+//                strings.add(term.word);
+//            }
+//        }
+//        return strings;
+//    }
 
 
     public static String formatPrint(double ans){
         double ansPer = ans * 100.0;
-        BigDecimal decimal = new BigDecimal(ansPer);
+        String exactAnsPer = String.valueOf(ansPer);
+        BigDecimal decimal = new BigDecimal(exactAnsPer);
         return decimal.setScale(2,BigDecimal.ROUND_HALF_UP).toPlainString();
     }
 

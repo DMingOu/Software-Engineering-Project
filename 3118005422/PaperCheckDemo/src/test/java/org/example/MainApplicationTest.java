@@ -1,6 +1,7 @@
 package org.example;
 
 import org.junit.AfterClass;
+import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.odm.MainApplication;
@@ -26,7 +27,14 @@ public class MainApplicationTest {
      */
     @Test
     public void testForEmpty(){
-        MainApplication.process("src/test/testcase/orig.txt","src/test/testcase/empty.txt","src/test/result/testEmptyResult.txt");
+        try {
+            MainApplication.process("src/test/testcase/orig.txt","src/test/testcase/empty.txt","src/test/result/testEmptyResult.txt");
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+            // 如果抛出异常，证明测试失败,没有通过，没通过的测试计数在Failures中
+            Assert.fail();
+        }
     }
 
     /**
@@ -34,7 +42,14 @@ public class MainApplicationTest {
      */
     @Test
     public void testForWrongOriginArgument(){
-        MainApplication.process("src/test/testcase/123.txt","src/test/testcase/orig_0.8_add.txt","src/test/result/testAddResult.txt");
+        try {
+            MainApplication.process("src/test/testcase/123.txt","src/test/testcase/orig_0.8_add.txt","src/test/result/testAddResult.txt");
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+            // 如果抛出异常，证明测试失败,没有通过，没通过的测试计数在Failures中
+            Assert.fail();
+        }
     }
 
     /**
@@ -42,7 +57,14 @@ public class MainApplicationTest {
      */
     @Test
     public void testForWrongOutputArgument(){
-        MainApplication.process("src/test/testcase/orig.txt","src/test/testcase/orig.txt","src/test/result/testAddResult.word");
+        try {
+            MainApplication.process("src/test/testcase/orig.txt","src/test/testcase/orig.txt","src/test/result/testAWrongArgumentResult");
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+            // 如果抛出异常，证明测试失败,没有通过，没通过的测试计数在Failures中
+            Assert.fail();
+        }
     }
 
     /**
@@ -50,7 +72,14 @@ public class MainApplicationTest {
      */
     @Test
     public void testForAdd(){
-        MainApplication.process("src/test/testcase/orig.txt","src/test/testcase/orig_0.8_add.txt","src/test/result/testAddResult.txt");
+        try {
+            MainApplication.process("src/test/testcase/orig.txt","src/test/testcase/orig_0.8_add.txt","src/test/result/testAddResult.txt");
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+            // 如果抛出异常，证明测试失败,没有通过，没通过的测试计数在Failures中
+            Assert.fail();
+        }
     }
 
     /**
@@ -58,7 +87,14 @@ public class MainApplicationTest {
      */
     @Test
     public void testForDel(){
-        MainApplication.process("src/test/testcase/orig.txt","src/test/testcase/orig_0.8_del.txt","src/test/result/testDelResult.txt");
+        try {
+            MainApplication.process("src/test/testcase/orig.txt","src/test/testcase/orig_0.8_del.txt","src/test/result/testDelResult.txt");
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+            // 如果抛出异常，证明测试失败,没有通过，没通过的测试计数在Failures中
+            Assert.fail();
+        }
     }
 
     /**
@@ -66,7 +102,14 @@ public class MainApplicationTest {
      */
     @Test
     public void testForDis1(){
-        MainApplication.process("src/test/testcase/orig.txt","src/test/testcase/orig_0.8_dis_1.txt","src/test/result/testDis1Result.txt");
+        try {
+            MainApplication.process("src/test/testcase/orig.txt","src/test/testcase/orig_0.8_dis_1.txt","src/test/result/testDis1Result.txt");
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+            // 如果抛出异常，证明测试失败,没有通过，没通过的测试计数在Failures中
+            Assert.fail();
+        }
     }
 
     /**
@@ -74,7 +117,15 @@ public class MainApplicationTest {
      */
     @Test
     public void testForDis3(){
-        MainApplication.process("src/test/testcase/orig.txt","src/test/testcase/orig_0.8_dis_3.txt","src/test/result/testDis3Result.txt");
+        try {
+            MainApplication.process("src/test/testcase/orig.txt","src/test/testcase/orig_0.8_dis_3.txt","src/test/result/testDis3Result.txt");
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+            // 如果抛出异常，证明测试失败,没有通过，没通过的测试计数在Failures中
+            Assert.fail();
+        }
+
     }
 
     /**
@@ -82,7 +133,14 @@ public class MainApplicationTest {
      */
     @Test
     public void testForDis7(){
-        MainApplication.process("src/test/testcase/orig.txt","src/test/testcase/orig_0.8_dis_7.txt","src/test/result/testDis7Result.txt");
+        try {
+            MainApplication.process("src/test/testcase/orig.txt","src/test/testcase/orig_0.8_dis_7.txt","src/test/result/testDis7Result.txt");
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+            // 如果抛出异常，证明测试失败,没有通过，没通过的测试计数在Failures中
+            Assert.fail();
+        }
     }
 
     /**
@@ -90,7 +148,14 @@ public class MainApplicationTest {
      */
     @Test
     public void testForDis10(){
-        MainApplication.process("src/test/testcase/orig.txt","src/test/testcase/orig_0.8_dis_10.txt","src/test/result/testDis10Result.txt");
+        try {
+            MainApplication.process("src/test/testcase/orig.txt","src/test/testcase/orig_0.8_dis_10.txt","src/test/result/testDis10Result.txt");
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+            // 如果抛出异常，证明测试失败,没有通过，没通过的测试计数在Failures中
+            Assert.fail();
+        }
     }
 
     /**
@@ -98,7 +163,14 @@ public class MainApplicationTest {
      */
     @Test
     public void testForDis15(){
-        MainApplication.process("src/test/testcase/orig.txt","src/test/testcase/orig_0.8_dis_15.txt","src/test/result/testDis15Result.txt");
+        try {
+            MainApplication.process("src/test/testcase/orig.txt","src/test/testcase/orig_0.8_dis_15.txt","src/test/result/testDis15Result.txt");
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+            // 如果抛出异常，证明测试失败,没有通过，没通过的测试计数在Failures中
+            Assert.fail();
+        }
     }
 
     /**
@@ -106,7 +178,14 @@ public class MainApplicationTest {
      */
     @Test
     public void testForMix(){
-        MainApplication.process("src/test/testcase/orig.txt","src/test/testcase/orig_0.8_mix.txt","src/test/result/testMixResult.txt");
+        try {
+            MainApplication.process("src/test/testcase/orig.txt","src/test/testcase/orig_0.8_mix.txt","src/test/result/testMixResult.txt");
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+            // 如果抛出异常，证明测试失败,没有通过，没通过的测试计数在Failures中
+            Assert.fail();
+        }
     }
 
     /**
@@ -114,7 +193,14 @@ public class MainApplicationTest {
      */
     @Test
     public void testForRep(){
-        MainApplication.process("src/test/testcase/orig.txt","src/test/testcase/orig_0.8_rep.txt","src/test/result/testRepResult.txt");
+        try {
+            MainApplication.process("src/test/testcase/orig.txt","src/test/testcase/orig_0.8_rep.txt","src/test/result/testRepResult.txt");
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+            // 如果抛出异常，证明测试失败,没有通过，没通过的测试计数在Failures中
+            Assert.fail();
+        }
     }
 
     /**
@@ -122,7 +208,14 @@ public class MainApplicationTest {
      */
     @Test
     public void testForSame(){
-        MainApplication.process("src/test/testcase/orig.txt","src/test/testcase/orig.txt","src/test/result/testSameResult.txt");
+        try {
+            MainApplication.process("src/test/testcase/orig.txt","src/test/testcase/orig.txt","src/test/result/testSameResult.txt");
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+            // 如果抛出异常，证明测试失败,没有通过，没通过的测试计数在Failures中
+            Assert.fail();
+        }
     }
 
     /**
@@ -130,7 +223,14 @@ public class MainApplicationTest {
      */
     @Test
     public void testForSub(){
-        MainApplication.process("src/test/testcase/orig.txt","src/test/testcase/orig_sub.txt","src/test/result/testSubResult.txt");
+        try {
+            MainApplication.process("src/test/testcase/orig.txt","src/test/testcase/orig_sub.txt","src/test/result/testSubResult.txt");
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+            // 如果抛出异常，证明测试失败,没有通过，没通过的测试计数在Failures中
+            Assert.fail();
+        }
     }
 
 }

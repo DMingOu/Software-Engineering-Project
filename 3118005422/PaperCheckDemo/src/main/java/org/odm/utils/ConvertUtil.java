@@ -35,6 +35,9 @@ public class ConvertUtil {
             int size = in.available();
             byte[] buffer=new byte[size];
             int bufferCount = in.read(buffer);
+            if(bufferCount == 0){
+                System.out.println(filepath+" 为空文本");
+            }
             in.close();
             //UTF-8 显示
             str = new String(buffer, StandardCharsets.UTF_8);
